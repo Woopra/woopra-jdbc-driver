@@ -5,9 +5,9 @@ Enables connecting to the Woopra Data API through a JDBC interface
 
 ## Usage
 
-- Initialize the driver:  Class.forName("com.woopra.jdbc.driver.WoopraDriver");
+- Initialize the driver:  `Class.forName("com.woopra.jdbc.driver.WoopraDriver");`
 
-- Create the connection:    Connection connection = DriverManager.getConnection("jdbc:woopra://[woopra-project-name]", "[api-access-id]", "[api-access-secret]");
+- Create the connection:    'Connection connection = DriverManager.getConnection("jdbc:woopra://[woopra-project-name]", "[api-access-id]", "[api-access-secret]");'
 			ex: Connection connection = DriverManager.getConnection("jdbc:woopra://my-website.com", "BLLISHYY1HBDUGS89CBT4BU4R288V1FL", "494aS6kMQDSKWPLBQ4Asu5FCdam5bShCBMX0pPI912dTaoT5VdbEWkgG4inFiYmY");
 
 Optionally the connection can be created with a properties parameter:
