@@ -12,11 +12,15 @@ Only SELECT operations are allowed
 - Create the connection:
 ```
 	Connection connection = DriverManager.getConnection("jdbc:woopra://[woopra-project-name]", "[api-access-id]", "[api-access-secret]");
-	or
+```
+Example:
+```
 	Connection connection = DriverManager.getConnection("jdbc:woopra://my-website.com", "BLLISHYY1HBDUGS89CBT4BU4R288V1FL", "494aS6kMQDSKWPLBQ4Asu5FCdam5bShCBMX0pPI912dTaoT5VdbEWkgG4inFiYmY");
 ```
 
-Optionally the connection can be created with a properties parameter:
+*access-id and access-secret can be generarted/retrieved in your Woopra members area*
+
+- Optionally the connection can be created with a properties parameter:
 ```
 	Properties p=new Properties();
 	p.setProperty("user", "access-id");
@@ -26,7 +30,7 @@ Optionally the connection can be created with a properties parameter:
 	connection=DriverManager.getConnection("jdbcLwoopra://my-website.com", p);
 ```
 
-Query the data: 
+- Query the data: 
 ```
 	String query = "select visitors.company as Company, visitors() as Count from visitors group by visitors.company order by Count";
 
