@@ -34,9 +34,9 @@ Example:
 ```
 	String query = "select visitors.company as Company, visitors() as Count from visitors group by visitors.company order by Count";
 
-        PreparedStatement ps = connection.prepareStatement(query);
-       	ResultSet rs = ps.executeQuery();
-        while (rs.next()) {
-       	    System.out.println(">>" + rs.getString("Company") + " :::: " + rs.getString(Count));
-        }
+	PreparedStatement ps = connection.prepareStatement(query);
+	ResultSet rs = ps.executeQuery();
+	while (rs.next()) {
+		System.out.println(">>" + rs.getString("Company") + " :::: " + rs.getString(Count));
+	}
 ```

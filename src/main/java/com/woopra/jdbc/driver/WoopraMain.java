@@ -12,8 +12,8 @@ public class WoopraMain {
         Class.forName("com.woopra.jdbc.driver.WoopraDriver");
 
         Connection connection = DriverManager.getConnection("jdbc:woopra://staging.woopra.com",
-                "BLLISHYY1HBDUGS89CBT4BU4R288V1FL",
-                "494aS6kMQDSKWPLBQ4Asu5FCdam5bShCBMX0pPI912dTaoT5VdbEWkgG4inFiYmY");
+                "ALLISHYY1HBDUGS89CBT4BU4R288V1FL",
+                "394aS6kMQDSKWPLBQ4Asu5FCdam5bShCBMX0pPI912dTaoT5VdbEWkgG4inFiYmY");
 
 //        String query = "select visitors() as People, visits() as Visits, actions() as Actions from actions group by actions.url where actions.~n=web-view order by People";
 //        String query = "select visitors() as People, visits() as Visits, actions() as Actions from visits group by substring(substring(date_format(visits.time, yyyy-DDDD), 4),  1)";
