@@ -19,16 +19,16 @@ Optionally the connection can be created with a properties parameter:
 			p.setProperty("password", "access-secret");
 			#optional
 			p.setProperty("api.version", "2.4");
-			connection=DriverManager.getConnection("jdbcLwoopra://my-website.com", p)
+			connection=DriverManager.getConnection("jdbcLwoopra://my-website.com", p);
 			```
 
--Query the data: 
-	```
+Query the data: 
+```
 	String query = "select visitors.company as Company, visitors() as Count from visitors group by visitors.company order by Count";
 
         PreparedStatement ps = connection.prepareStatement(query);
-        ResultSet rs = ps.executeQuery();
+       	ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            System.out.println(">>" + rs.getString("Company") + " :::: " + rs.getString(Count));
+       	    System.out.println(">>" + rs.getString("Company") + " :::: " + rs.getString(Count));
         }
-	```
+```
