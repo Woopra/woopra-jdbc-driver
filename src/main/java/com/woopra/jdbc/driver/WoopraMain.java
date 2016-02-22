@@ -28,10 +28,7 @@ public class WoopraMain {
         PreparedStatement ps = connection.prepareStatement(query);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            System.out.println(rs.getMetaData().getColumnType(1));
-//            System.out.println(rs.getMetaData().getColumnName(1));
             System.out.println(">>" + rs.getString("~") + " :::: " + rs.getString(1));
-//            System.out.println(rs.getString(3));
         }
 
         rs.close();
