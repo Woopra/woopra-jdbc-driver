@@ -87,7 +87,9 @@ public class WoopraResultSet implements ResultSet {
 
             int code = conn.getResponseCode();
 
-            System.out.println(code);
+            if (code != 200) {
+                throw new SQLException("Cannot establish http connection to the data source, code=" + code);
+            }
 
             InputStream in = conn.getInputStream();
             this.reader = new BufferedReader(new InputStreamReader(in));
@@ -148,11 +150,7 @@ public class WoopraResultSet implements ResultSet {
         try {
             line = this.reader.readLine();
         } catch (Exception ex) {
-
-            ex.printStackTrace();
-
-            close();
-            return false;
+            throw new SQLException(ex);
         }
 
         if (line == null) {
