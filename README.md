@@ -27,7 +27,7 @@ Example:
 	p.setProperty("password", "access-secret");
 	#optional
 	p.setProperty("api.version", "2.4");
-	connection=DriverManager.getConnection("jdbcLwoopra://my-website.com", p);
+	connection=DriverManager.getConnection("jdbc:woopra://my-website.com", p);
 ```
 
 - Query the data: 
